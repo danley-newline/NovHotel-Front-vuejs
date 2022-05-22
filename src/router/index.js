@@ -1,13 +1,16 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import PageInfo from '../views/PageInfo.vue'
+import DetailPage from '../views/DetailPage.vue'
 import Home from '../views/Home.vue'
+import ReservPage from '../views/ReservPage.vue'
+
 
 Vue.use(VueRouter);
 
 const routes = [
     {path:'/', component:Home, name:'home-page'},
-    {path:'/page-info', component:PageInfo, name:'page-info'},
+    {path:'/details-chambre', component:DetailPage, name:'detail-page'},
+    {path:'/reservation', component:ReservPage, name:'reserv-page'},
 
     
 ];

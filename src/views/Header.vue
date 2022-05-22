@@ -4,7 +4,7 @@
           <div class="d-flex justify-content-between">
               <div class="left-content">
                 <a href="/">
-                  <img src="../assets/img1.png" width="100" height="50" alt="">
+                  <img src="../assets/images/img1.png" width="100" height="50" alt="">
                 </a>
               </div>
             <div class="right-content">
@@ -19,7 +19,7 @@
                         <a href="">Se connecter</a>
                     </li>
                     <li>
-                        <img width="25" src="../assets/menu.png" alt="">
+                        <img width="25" src="../assets/images/menu.png" alt="">
                     </li>
                 </ul>
             </div>

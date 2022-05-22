@@ -29,7 +29,12 @@ body{
   box-sizing: border-box;
   overflow-x: hidden;
 }
-
+.bord-btm-ccc{
+    border-bottom: 1px solid #ccc;
+}
+.bord-ccc{
+    border: 1px solid #ccc;
+}
 .font-weight-bold{
     font-weight: bold;
 }
@@ -53,5 +58,8 @@ body{
 .btn-blue{
     background: #0e4d8a;
     color: #fff;
+}
+.bor-rad-10{
+  border-radius: 10px;
 }
 </style>
