@@ -1,24 +1,12 @@
-# Nov Hotel
 
-> A Vue.js project
->Pour excecuter les commandes en dessous
->Vous aurez besoin de la version 14 de node.js
+# Nov Hotel Frontend
+Code vuejs du site NovHotel 
 
-``` bash
-#Si vous avez une version inferieur ou superieur veuillez l'installer et switcher sur le 14
-```
+# Installation
 
-## Build Setup
+1. Clonez le dépot où vous voulez
+2. verifiez que votre version de node est le 14 ou installez le et switcher dessu
 
-``` bash
-# installer les dépendences
-npm install
-
-# relancer le serveur et acceder au project
-npm run dev
-
-# build pour production
-npm run build
-```
-
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
+3. Installez les dépendances : `npm install`
+4. Lancez le server : `npm run dev` 
+4. Builder pour production : `npm run build` 
