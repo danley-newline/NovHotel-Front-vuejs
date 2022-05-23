@@ -161,12 +161,40 @@ export default {
   left: 17%;
   transform: translate(-10%, 0%);
 }
+
+@media screen and (max-width: 991px) {
+  .bienvenue-block {
+    bottom: -105%;
+  }
+  .special-blank-height {
+    height: 700px !important;
+  }
+  
+}
+
+
+@media screen and (min-width: 1650px) {
+  .bienvenue-block {
+    bottom: -105%;
+  }
+  .special-blank-height {
+    height: 800px !important;
+  }
+}
+
 @media screen and (max-width: 1600px) {
   .bienvenue-block {
     width: 90%;
     left: 15%;
   }
 }
+@media screen and (max-width: 1300px) {
+  .bienvenue-block {
+    width: 98% !important;
+    left: 11% !important;
+  }
+}
+
 @media screen and (max-width: 1445px) {
   .bienvenue-block {
     width: 94%;

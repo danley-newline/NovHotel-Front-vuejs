@@ -162,6 +162,7 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
   props:{
     chambreChoose:{
@@ -182,6 +183,10 @@ export default {
             moyen_paiement:'cash',
             nombre_of_night:1,
             lieu:''
+        },
+        lior:{
+          title:'frida daniel',
+          content:'verification si jai le bon truc'
         },
         pricePerNight:0,
         reductionAdultes:0,
@@ -254,18 +259,39 @@ export default {
     
 
     sendReservation(){
-      this.reserveChambre.name = this.chambreChoose.chambre;
-      this.reserveChambre.lieu = this.chambreChoose.lieu;
+      // this.reserveChambre.name = this.chambreChoose.chambre;
+      // this.reserveChambre.lieu = this.chambreChoose.lieu;
 
-      if (this.reserveChambre.enfants == null) {
-        console.log("il est null")
-        this.reserveChambre.enfants = 0
-      }
+      // if (this.reserveChambre.enfants == null) {
+      //   console.log("il est null")
+      //   this.reserveChambre.enfants = 0
+      // }
 
-      if(this.reserveChambre.date_arrive != '' && this.reserveChambre.date_depart != '' && this.reserveChambre.adultes > 0 )
-      {
-        console.log("make the post it's cool");
-      }
+    //  let axiosConfig = {
+    //   headers: {
+    //       'Content-Type': 'application/json;charset=UTF-8',
+    //       "Access-Control-Allow-Origin": "*",
+    //   }
+    // };
+
+    
+
+      
+
+      // if(this.reserveChambre.date_arrive != '' && this.reserveChambre.date_depart != '' && this.reserveChambre.adultes > 0 )
+      // {
+      //   console.log("make the post it's cool");
+      //   // const body = this.reserveChambre;
+      //   // axios.post("http://127.0.0.1:8000/api/post",body,)
+      //   //       .then(response => {
+      //   //         console.log(response)
+      //   //       }).catch(err => {
+      //   //       console.log("modibo")
+      //   //       console.log(err);
+      //   //   });
+      // }else{
+      //   console.log("voyez reverifier")
+      // }
       
       console.log("total info ", this.reserveChambre);
     }
