@@ -4,7 +4,7 @@
           <div class="d-flex justify-content-between">
               <div class="left-content">
                 <a href="/">
-                  <img src="../assets/images/img1.png" width="100" height="50" alt="">
+                  <img src="../assets/images/logo-nov.png" height="50" alt="">
                 </a>
               </div>
             <div class="right-content">

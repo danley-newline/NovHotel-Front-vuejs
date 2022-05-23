@@ -108,7 +108,7 @@
                     <div class="my-4">
                         <div class="hotel-block" @click="seeDetail(items)">
                             <img  :src="require(`../assets/images/${items.imgPrim}`)" class="img-fluid head-img" alt="" /> 
-                            <img width="40" src="../assets/images/menu.png"  class="icon-absolute" alt="" />
+                            <img width="70" src="../assets/images/heart.png"  class="icon-absolute" alt="" />
                             <div class="hotel-content p-4">
                                 <div class="d-flex justify-content-between">
                                     <p>
@@ -124,7 +124,7 @@
                                 <h2 class="font-weight-normal">{{items.chambre}}</h2>
                                 <div class="sous-content mt-4">
                                     <p v-for="(item, index) in items.comode" :key="index"> 
-                                    <img width="10" :src="require(`../assets/images/${item.icon}`)" alt="" />
+                                    <img width="22" :src="require(`../assets/images/${item.icon}`)" alt="" />
                                     <span class="mx-3">{{item.text}}</span>
                                     </p>
                                     
@@ -166,19 +166,19 @@ export default {
                     chambre:'NovHôtel Royal Suite',
                     comode:[
                         {
-                            icon:'menu.png',
+                            icon:'person.png',
                             text:'12 personnes',
                         },
                         {
-                            icon:'menu.png',
+                            icon:'bed.png',
                             text:'6 chambres',
                         },
                         {
-                            icon:'menu.png',
+                            icon:'bed.png',
                             text:'6 salles de bain',
                         },
                         {
-                            icon:'menu.png',
+                            icon:'trace.png',
                             text:'800 m2',
                         },
                     ],
@@ -192,19 +192,19 @@ export default {
                     chambre:'NovHôtel Man Suite',
                     comode:[
                         {
-                            icon:'menu.png',
+                            icon:'person.png',
                             text:'12 personnes',
                         },
                         {
-                            icon:'menu.png',
+                            icon:'bed.png',
                             text:'6 chambres',
                         },
                         {
-                            icon:'menu.png',
+                            icon:'bed.png',
                             text:'6 salles de bain',
                         },
                         {
-                            icon:'menu.png',
+                            icon:'trace.png',
                             text:'800 m2',
                         },
                     ],
@@ -218,19 +218,19 @@ export default {
                     chambre:'NovHôtel Lord Suite',
                     comode:[
                         {
-                            icon:'menu.png',
+                            icon:'person.png',
                             text:'12 personnes',
                         },
                         {
-                            icon:'menu.png',
+                            icon:'bed.png',
                             text:'6 chambres',
                         },
                         {
-                            icon:'menu.png',
+                            icon:'bed.png',
                             text:'6 salles de bain',
                         },
                         {
-                            icon:'menu.png',
+                            icon:'trace.png',
                             text:'800 m2',
                         },
                     ],
@@ -244,19 +244,19 @@ export default {
                     chambre:'NovHôtel Sky ',
                     comode:[
                         {
-                            icon:'menu.png',
+                            icon:'person.png',
                             text:'12 personnes',
                         },
                         {
-                            icon:'menu.png',
+                            icon:'bed.png',
                             text:'6 chambres',
                         },
                         {
-                            icon:'menu.png',
+                            icon:'bed.png',
                             text:'6 salles de bain',
                         },
                         {
-                            icon:'menu.png',
+                            icon:'trace.png',
                             text:'800 m2',
                         },
                     ],
@@ -312,11 +312,9 @@ button.VueCarousel-navigation-button {
 
     .icon-absolute {
     position: absolute;
-    top: 6%;
-    left: 6%;
-    background: #fff;
-    padding: 0.4rem;
-    border-radius: 50%;
+    top: 4%;
+    left: 4%;
+    
 }
    
 }

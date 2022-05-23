@@ -5,7 +5,7 @@
       'background-image': 'url(' + require(`../assets/images/${placeContent.imgPrim}`) + ')'
   }">
       <div class="container">
-        <img class="heart-icon" width="50" src="../assets/images/menu.png" alt="" />
+        <img class="heart-icon" width="70" src="../assets/images/heart.png" alt="" />
       </div>
     </div>
     <div class="container pos-relative">
@@ -17,7 +17,7 @@
 
           <div class="d-flex my-2 justify-content-between block-novtitle">
             <div v-for="(item, i) in placeContent.comode" :key="i">
-              <img width="10" :src="require(`../assets/images/${item.icon}`)" alt="" />
+              <img width="22" :src="require(`../assets/images/${item.icon}`)" alt="" />
               <span>{{item.text}}</span>
             </div>
           </div>
@@ -30,29 +30,29 @@
 
           <div class="bord-btm-ccc my-5 pb-5">
               <h2 class="font-weight-bold">Principales caractéristiques</h2>
-                <div class="w-50 mt-4 d-flex justify-content-between principales">
+                <div class="w-60 mt-4 d-flex justify-content-between principales">
                     <div>
                         <p>
-                        <img width="10" src="../assets/images/menu.png" alt="" />
+                        <img width="22" src="../assets/images/trace.png" alt="" />
                         <span>Bar extérieur</span>
                         </p>
                         <p>
-                        <img width="10" src="../assets/images/menu.png" alt="" />
+                        <img width="22" src="../assets/images/trace.png" alt="" />
                         <span>Climatisation centrale</span>
                         </p>
                         <p>
-                        <img width="10" src="../assets/images/menu.png" alt="" />
+                        <img width="22" src="../assets/images/trace.png" alt="" />
                         <span>Équipement de fitness</span>
                         </p>
                         
                     </div>
                     <div>
                         <p>
-                        <img width="10" src="../assets/images/menu.png" alt="" />
+                        <img width="22" src="../assets/images/trace.png" alt="" />
                         <span>Four à pizza</span>
                         </p>
                         <p>
-                        <img width="10" src="../assets/images/menu.png" alt="" />
+                        <img width="22" src="../assets/images/trace.png" alt="" />
                         <span>Chambre à vapeur</span>
                         </p>
                     </div>
@@ -65,19 +65,19 @@
               <div class="bord-ccc px-4 py-5 mt-4 d-flex justify-content-between services">
                     <div>
                         <p>
-                        <img width="10" src="../assets/images/menu.png" alt="" />
+                        <img width="22" src="../assets/images/trace.png" alt="" />
                         <span>Majordome</span>
                         </p>
                         <p>
-                        <img width="10" src="../assets/images/menu.png" alt="" />
+                        <img width="22" src="../assets/images/trace.png" alt="" />
                         <span>Accès à une salle de  sport partagée</span>
                         </p>
                         <p>
-                        <img width="10" src="../assets/images/menu.png" alt="" />
+                        <img width="22" src="../assets/images/trace.png" alt="" />
                         <span>Nettoyage tous les jours</span>
                         </p>
                         <p>
-                        <img width="10" src="../assets/images/menu.png" alt="" />
+                        <img width="22" src="../assets/images/trace.png" alt="" />
                         <span>Notre équipe locale disponible pendant tout votre séjour</span>
                         </p>
                         
@@ -85,15 +85,15 @@
                     
                     <div class="right-service">
                         <p>
-                        <img width="10" src="../assets/images/menu.png" alt="" />
+                        <img width="22" src="../assets/images/trace.png" alt="" />
                         <span>Pétit-dejeuner préparé</span>
                         </p>
                         <p>
-                        <img width="10" src="../assets/images/menu.png" alt="" />
+                        <img width="22" src="../assets/images/trace.png" alt="" />
                         <span>chef</span>
                         </p>
                         <p>
-                        <img width="10" src="../assets/images/menu.png" alt="" />
+                        <img width="22" src="../assets/images/trace.png" alt="" />
                         <span>Un tailleur dédié pour organiser vos vacances sur-mesure</span>
                         </p>
                     </div>
@@ -105,64 +105,13 @@
             <div class="bord-btm-ccc my-5 pb-5 pieces-block">
               <h2 class="font-weight-bold">Les pièces</h2>
               <div class="row mt-5">
-                  <div class="col-md-4">
-                      <div class="bord-ccc py-4 px-5 mb-4">
+                  <div class="col-md-4 mb-4" v-for="(items,i) in pieces" :key="i">
+                      <div class="bord-ccc p-4 h-100" >
                           <p class="font-weight-bold">
-                              Le salon
+                              {{items.title}}
                           </p>
-                          <p>Hifi stéréo</p>
-                          <p>1 télé</p>
-                          <p>Cheminée</p>
-                      </div>
-                  </div>
-                  <div class="col-md-4">
-                      <div class="bord-ccc py-4 px-5 mb-4">
-                          <p class="font-weight-bold">
-                              Le salon
-                          </p>
-                          <p>Hifi stéréo</p>
-                          <p>1 télé</p>
-                          <p>Cheminée</p>
-                      </div>
-                  </div>
-                  <div class="col-md-4">
-                      <div class="bord-ccc py-4 px-5 mb-4">
-                          <p class="font-weight-bold">
-                              Le salon
-                          </p>
-                          <p>Hifi stéréo</p>
-                          <p>1 télé</p>
-                          <p>Cheminée</p>
-                      </div>
-                  </div>
-                  <div class="col-md-4">
-                      <div class="bord-ccc py-4 px-5 mb-4">
-                          <p class="font-weight-bold">
-                              Le salon
-                          </p>
-                          <p>Hifi stéréo</p>
-                          <p>1 télé</p>
-                          <p>Cheminée</p>
-                      </div>
-                  </div>
-                  <div class="col-md-4">
-                      <div class="bord-ccc py-4 px-5 mb-4">
-                          <p class="font-weight-bold">
-                              Le salon
-                          </p>
-                          <p>Hifi stéréo</p>
-                          <p>1 télé</p>
-                          <p>Cheminée</p>
-                      </div>
-                  </div>
-                  <div class="col-md-4">
-                      <div class="bord-ccc py-4 px-5 mb-4">
-                          <p class="font-weight-bold">
-                              Le salon
-                          </p>
-                          <p>Hifi stéréo</p>
-                          <p>1 télé</p>
-                          <p>Cheminée</p>
+                          <p v-for="(item,index) in items.content" :key="index">{{item.text}}</p>
+                          
                       </div>
                   </div>
                   <p class="color-bl-dark mt-3">Voir toutes les chambres</p>
@@ -173,11 +122,11 @@
               <h2 class="font-weight-bold">Localisation</h2>
               <div class="d-flex my-4 localisation">
                   <p>
-                        <img width="10" src="../assets/images/menu.png" alt="" />
+                        <img width="22" src="../assets/images/trace.png" alt="" />
                         <span>A la plage d'Assinie</span>
                         </p>
                     <p class="mx-5">
-                        <img width="10" src="../assets/images/menu.png" alt="" />
+                        <img width="22" src="../assets/images/trace.png" alt="" />
                         <span>Vue sur la mer</span>
                         </p>
               </div>
@@ -345,17 +294,115 @@ export default {
         experienceContent:[
             {
                 text:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores sed vero labore veritatis et quos perferendis in odio incidunt iste.',
-                img:'exp-1.png'
+                img:'card-p.png'
             },
             {
                 text:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores sed vero labore veritatis et quos perferendis in odio incidunt iste.',
-                img:'exp-2.png'
+                img:'card-m.png'
             },
             {
                 text:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores sed vero labore veritatis et quos perferendis in odio incidunt iste.',
-                img:'exp-3.png'
+                img:'card-n.png'
             },
 
+        ],
+        pieces:[
+            {
+                title:'Le salon',
+                content:[
+                    {
+                        text:'Hifi stéréo'
+                    },
+                    {
+                        text:'1 télé'
+                    },
+                    {
+                        text:'Cheminée'
+                    },
+                ]
+            },
+            {
+                title:'Salle à manger',
+                content:[
+                    {
+                        text:'12 sièges'
+                    },
+                ]
+            },
+            {
+                title:'Coin repas extérieur',
+                content:[
+                    {
+                        text:'10 places'
+                    },
+                ]
+            },
+            {
+                title:'Cuisine',
+                content:[
+                    {
+                        text:'Cuisine séparée'
+                    },
+                                        {
+                        text:'Lave-vaisselle'
+                    },
+                                        {
+                        text:'Four micro onde'
+                    },
+                                        {
+                        text:'Bouilloire'
+                    },
+                                        {
+                        text:'Grille-pain'
+                    },
+                    {
+                        text:'Machine nespresso'
+                    },
+                    {
+                        text:'Machine à expresso'
+                    },
+                ]
+            },
+            {
+                title:'Chambre 1',
+                content:[
+                    {
+                        text:'1 lit double'
+                    },
+                                        {
+                        text:'1 télé'
+                    },
+                                        {
+                        text:'30 m²'
+                    },
+                                        {
+                        text:'Dans la maison'
+                    },
+                                        {
+                        text:'principale'
+                    },
+                ]
+            },
+            {
+                title:'Chambre 1 salle ',
+                content:[
+                    {
+                        text:'de bain'
+                    },
+                                        {
+                        text:'Lavabo double'
+                    },
+                                        {
+                        text:'Douche à l’italienne'
+                    },
+                                        {
+                        text:'Toilette'
+                    },
+                                        {
+                        text:'Sèche-cheveux'
+                    },
+                ]
+            },
         ]
         
     };
@@ -388,6 +435,9 @@ export default {
 </script>
 
 <style lang="scss">
+.w-60{
+    width: 60% !important;
+}
 .experience{
     .card-img-block{
         background-size: cover;
@@ -413,10 +463,8 @@ export default {
 
   .heart-icon {
     position: absolute;
-    bottom: -26px;
-    // transform: translate(0, -50%);
+    bottom: -36px;
     background: #fff;
-    padding: 10px;
     border-radius: 50%;
   }
 }

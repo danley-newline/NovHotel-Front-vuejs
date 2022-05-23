@@ -1,10 +1,10 @@
 <template>
   <div>
       <div class="container-fluid p-0 py-5 footer-bg">
-          <div class="container py-5">
+          <div class="p-5">
               <div class="d-flex justify-content-between align-items-center">
                   <div>
-                      <img src="../assets/images/img1.png" width="150" height="100" alt="">
+                      <img src="../assets/images/footer-logo.png" height="150" alt="">
                   </div>
                   <div>
                       <h2 class="text-white">Souscrivez à notre Newsletter</h2>

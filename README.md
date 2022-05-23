@@ -1,17 +1,23 @@
-# novhotel
+# Nov Hotel
 
 > A Vue.js project
+>Pour excecuter les commandes en dessous
+>Vous aurez besoin de la version 14 de node.js
+
+``` bash
+#Si vous avez une version inferieur ou superieur veuillez l'installer et switcher sur le 14
+```
 
 ## Build Setup
 
 ``` bash
-# install dependencies
+# installer les dépendences
 npm install
 
-# serve with hot reload at localhost:8080
+# relancer le serveur et acceder au project
 npm run dev
 
-# build for production with minification
+# build pour production
 npm run build
 ```
 

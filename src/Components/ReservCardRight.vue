@@ -130,8 +130,7 @@
         <div class="d-flex p-2 mt-2 justify-content-between">
           <div>
             <label for="visa"
-              ><img width="10" src="../assets/images/menu.png" alt=""
-            /></label>
+              >Visa</label>
             <input
               type="radio"
               id="visa"
@@ -309,16 +308,20 @@ export default {
                 this.SuccesRe = true;
                 setTimeout(()=>{
                 this.SuccesRe = false;
-              },5000);
-                // console.log(response)
-                // console.log('ok cest soumis');
+              },2000);
+
+              setTimeout(()=>{
+                this.$router.push('/');
+                window.location.reload();
+              },2000);
+                
               }).catch(err => {
               console.log("Erreur coté serveur");
 
               this.ErreurServeur = true;
                 setTimeout(()=>{
                 this.ErreurServeur = false;
-              },5000);
+              },4000);
 
               console.log(err);
           });

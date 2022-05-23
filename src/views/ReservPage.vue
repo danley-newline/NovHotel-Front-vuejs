@@ -15,8 +15,7 @@
                     />
                     <div class="goback-icon" @click="goback()">
                       <img
-                          width="30"
-                          src="../assets/images/menu.png"
+                          src="../assets/images/back-icon.png"
                           alt=""
                         />
                     </div>
@@ -59,8 +58,14 @@
 
                 <div class="descriptioin-chambre">
                   <div class="d-flex mb-4 pb-2">
-                    <div class="interieur p-3" v-for="i in 3" :key="i">
-                      <img width="50" src="../assets/images/menu.png" alt="" />
+                    <div class="interieur" >
+                      <img width="80" src="../assets/images/icon-bed.png" alt="" />
+                    </div>
+                    <div class="interieur" >
+                      <img width="80" src="../assets/images/icon-tv.png" alt="" />
+                    </div>
+                    <div class="interieur" >
+                      <img width="80" src="../assets/images/icon-bain.png" alt="" />
                     </div>
                   </div>
 
@@ -77,7 +82,7 @@
                   </p>
                 </div>
               </div>
-              <div class="col-md-3">
+              <div class="col-md-3 special-souscript-sm">
                 
                 <ReservCardRight :chambreChoose="placeContent"/>
               </div>
@@ -195,6 +200,19 @@ export default {
   }
 }
 
+@media screen and (max-width: 1232px) {
+  .special-souscript-sm {
+    width: 100% !important;
+  }
+  .bienvenue-block {
+    bottom: -192%;
+    }
+
+  .special-blank-height {
+    height: 1200px !important;
+  }
+}
+
 @media screen and (max-width: 1445px) {
   .bienvenue-block {
     width: 94%;
@@ -219,8 +237,6 @@ export default {
 }
 
 .interieur {
-  border: 1px solid #0e4d8a;
-  border-radius: 10px;
   margin-right: 2rem;
 }
 .special-blank-height {
@@ -262,7 +278,9 @@ input.form-check-input {
     top: 7%;
     left: 7%;
     background: #ccc;
-    padding: 0.7rem;
+    padding:1rem;
+    height: 56px;
+    width: 56px;
     border-radius: 50%;
 
     &:hover{
