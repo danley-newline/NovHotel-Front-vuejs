@@ -271,7 +271,7 @@ export default {
     },
     methods:{
         seeDetail(e){
-            console.log("voici le click ", e)
+            // console.log("voici le click ", e)
             this.$store.commit("choosenMutation",e);
             
             // this.$router.push({name:'detail-page'})

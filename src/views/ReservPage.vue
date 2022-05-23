@@ -106,7 +106,7 @@ export default {
   },
   created(){
            this.placeContent = this.$store.state.ChoosenPlace;
-            console.log("coisi reserve-page ", this.placeContent)
+            // console.log("coisi reserve-page ", this.placeContent)
     },
   components:{
     ReservCardRight,
@@ -114,7 +114,7 @@ export default {
   methods:{
     goback(){
       this.$router.go(-1);
-      console.log("is clicked")
+      // console.log("is clicked")
     }
   }
 };

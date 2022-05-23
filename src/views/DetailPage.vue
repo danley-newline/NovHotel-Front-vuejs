@@ -413,7 +413,7 @@ export default {
   created(){
            this.placeContent = this.$store.state.ChoosenPlace;
            this.isReserve = this.placeContent.isDisponible;
-            console.log("coisi detail-page ", this.placeContent)
+            // console.log("coisi detail-page ", this.placeContent)
     },
   methods:{
       onScroll(e){

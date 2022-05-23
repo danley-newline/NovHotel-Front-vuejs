@@ -207,7 +207,7 @@ export default {
   },
 
   mounted(){
-    console.log("mounted chambre", this.chambreChoose);
+    // console.log("mounted chambre", this.chambreChoose);
     this.reserveChambre.total_price = this.chambreChoose.price;
     this.pricePerNight = this.chambreChoose.price;
   },
@@ -237,8 +237,8 @@ export default {
       
     },
     callGetDays(){
-      console.log("voir la date depart", this.reserveChambre.date_depart);
-      console.log("voir la date arrive", this.reserveChambre.date_arrive);
+      // console.log("voir la date depart", this.reserveChambre.date_depart);
+      // console.log("voir la date arrive", this.reserveChambre.date_arrive);
       
       if (this.reserveChambre.date_depart != '' && this.reserveChambre.date_arrive != '') {
          this.getNumberOfNight(this.reserveChambre.date_depart, this.reserveChambre.date_arrive)
@@ -270,9 +270,9 @@ export default {
       this.reserveChambre.lieu = this.chambreChoose.lieu;
 
       if (this.reserveChambre.enfants == null) {
-        console.log("il est null")
+        // console.log("il est null")
         this.reserveChambre.enfants = "0";
-        console.log("enfants ",this.reserveChambre.enfants.toString());
+        // console.log("enfants ",this.reserveChambre.enfants.toString());
         
       }
      
@@ -301,7 +301,7 @@ export default {
         this.reserveChambre.nombre_of_night = this.reserveChambre.nombre_of_night.toString();
 
 
-        console.log("make the post it's cool");
+        // console.log("make the post it's cool");
        axios.post("http://127.0.0.1:8000/api/post",this.reserveChambre)
               .then(response => {
                 
@@ -316,21 +316,21 @@ export default {
               },2000);
                 
               }).catch(err => {
-              console.log("Erreur coté serveur");
+              // console.log("Erreur coté serveur");
 
               this.ErreurServeur = true;
                 setTimeout(()=>{
                 this.ErreurServeur = false;
               },4000);
 
-              console.log(err);
+              // console.log(err);
           });
 
       }else{
-        console.log("voyez reverifier")
+        // console.log("voyez reverifier")
       }
       
-      console.log("total info ", this.reserveChambre);
+      // console.log("total info ", this.reserveChambre);
     }
   },
 
