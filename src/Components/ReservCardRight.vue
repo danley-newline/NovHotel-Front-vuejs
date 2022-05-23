@@ -157,6 +157,14 @@
         </div>
       </div>
       <button class="btn btn-violet w-100 mt-4 py-3" @click="sendReservation">RESERVER</button>
+        <div class="block-alerte text-center " >
+        <b-alert show variant="danger mt-3" v-if="ErreurDate">Erreur , veuillez modifier les dates de réservations   </b-alert>
+        <b-alert show variant="danger mt-3" v-if="ErreurAdultes">Le nombre d'adultes doit etre superieur a 0   </b-alert>
+        <b-alert show variant="danger mt-3" v-if="ErreurServeur">Verifiez que votre serveur symfony tourne bien sur http://127.0.0.1:8000/  car il est injoignable </b-alert>
+
+        <b-alert show variant="success mt-3" v-if="SuccesRe">Reservation Soumis avec succès</b-alert>
+        </div>
+
     </div>
   </div>
 </template>
@@ -171,6 +179,10 @@ export default {
   },
   data(){
     return{
+      ErreurDate:false,
+      ErreurAdultes:false,
+      ErreurServeur:false,
+      SuccesRe:false,
       reserveChambre:{
             name:'',
             price:0,
@@ -183,10 +195,6 @@ export default {
             moyen_paiement:'cash',
             nombre_of_night:1,
             lieu:''
-        },
-        lior:{
-          title:'frida daniel',
-          content:'verification si jai le bon truc'
         },
         pricePerNight:0,
         reductionAdultes:0,
@@ -259,39 +267,65 @@ export default {
     
 
     sendReservation(){
-      // this.reserveChambre.name = this.chambreChoose.chambre;
-      // this.reserveChambre.lieu = this.chambreChoose.lieu;
+      this.reserveChambre.name = this.chambreChoose.chambre;
+      this.reserveChambre.lieu = this.chambreChoose.lieu;
 
-      // if (this.reserveChambre.enfants == null) {
-      //   console.log("il est null")
-      //   this.reserveChambre.enfants = 0
-      // }
+      if (this.reserveChambre.enfants == null) {
+        console.log("il est null")
+        this.reserveChambre.enfants = "0";
+        console.log("enfants ",this.reserveChambre.enfants.toString());
+        
+      }
+     
+      if (this.reserveChambre.date_arrive == '' || this.reserveChambre.date_depart == '') {
+        this.ErreurDate = true;
+                setTimeout(()=>{
+                this.ErreurDate = false;
+              },5000);
+      }
 
-    //  let axiosConfig = {
-    //   headers: {
-    //       'Content-Type': 'application/json;charset=UTF-8',
-    //       "Access-Control-Allow-Origin": "*",
-    //   }
-    // };
-
-    
-
+      if (this.reserveChambre.adultes == 0 || this.reserveChambre.adultes < 0) {
+        this.ErreurAdultes = true;
+                setTimeout(()=>{
+                this.ErreurAdultes = false;
+              },5000);
+      }
       
 
-      // if(this.reserveChambre.date_arrive != '' && this.reserveChambre.date_depart != '' && this.reserveChambre.adultes > 0 )
-      // {
-      //   console.log("make the post it's cool");
-      //   // const body = this.reserveChambre;
-      //   // axios.post("http://127.0.0.1:8000/api/post",body,)
-      //   //       .then(response => {
-      //   //         console.log(response)
-      //   //       }).catch(err => {
-      //   //       console.log("modibo")
-      //   //       console.log(err);
-      //   //   });
-      // }else{
-      //   console.log("voyez reverifier")
-      // }
+      if(this.reserveChambre.date_arrive != '' && this.reserveChambre.date_depart != '' && this.reserveChambre.adultes > 0 )
+      {
+
+        this.reserveChambre.price = this.reserveChambre.price.toString();
+        this.reserveChambre.adultes = this.reserveChambre.adultes.toString();
+        this.reserveChambre.reduction = this.reserveChambre.reduction.toString();
+        this.reserveChambre.total_price = this.reserveChambre.total_price.toString();
+        this.reserveChambre.nombre_of_night = this.reserveChambre.nombre_of_night.toString();
+
+
+        console.log("make the post it's cool");
+       axios.post("http://127.0.0.1:8000/api/post",this.reserveChambre)
+              .then(response => {
+                
+                this.SuccesRe = true;
+                setTimeout(()=>{
+                this.SuccesRe = false;
+              },5000);
+                // console.log(response)
+                // console.log('ok cest soumis');
+              }).catch(err => {
+              console.log("Erreur coté serveur");
+
+              this.ErreurServeur = true;
+                setTimeout(()=>{
+                this.ErreurServeur = false;
+              },5000);
+
+              console.log(err);
+          });
+
+      }else{
+        console.log("voyez reverifier")
+      }
       
       console.log("total info ", this.reserveChambre);
     }
